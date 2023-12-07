@@ -1,0 +1,16 @@
+@import './variables.scss';
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: $bg-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+  color: $main-text-color;
+  margin: 0;
+  user-select: none;
+}
