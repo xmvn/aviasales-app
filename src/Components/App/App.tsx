@@ -13,7 +13,7 @@ function App() {
       <Header />
       <div className='main-content'>
         <AsideFilter />
-        <div>
+        <div className='main-content__list'>
           <TicketSortingPanel />
           <TicketList />
         </div>
