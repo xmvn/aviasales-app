@@ -3,32 +3,37 @@
 .ticket {
   background-color: $color-white;
   width: 100%;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   padding: 20px;
   border-radius: 10px;
   box-shadow: $box-shadow;
+  cursor: pointer;
 
   &-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 36px;
+
     &__price {
       color: $color-blue;
       font-size: 24px;
     }
+
     &__logo {
       width: 110px;
     }
   }
+
   &-content {
     margin: 10px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 3vw;
     flex-wrap: wrap;
-    gap: 20px;
+
     &-info {
+      width: 110px;
+
       &__title {
         line-height: 18px;
         color: $gray-text-color;
@@ -36,6 +41,7 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
+
       &__value {
         font-size: 14px;
         line-height: 21px;

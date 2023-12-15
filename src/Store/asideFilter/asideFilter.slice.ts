@@ -3,11 +3,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { IFilterState } from '../../Types/types'
 
 const initialState: IFilterState = {
-  all: false,
-  noTransfer: false,
-  oneTransfer: false,
-  twoTransfers: false,
-  threeTransfers: false,
+  all: true,
+  noTransfers: true,
+  oneTransfer: true,
+  twoTransfers: true,
+  threeTransfers: true,
 }
 
 const asideFilterSlice = createSlice({
@@ -19,7 +19,7 @@ const asideFilterSlice = createSlice({
 
       if (payload === 'all') {
         const { all, ...rest } = state
-        return { ...rest, all: !all, noTransfer: !all, oneTransfer: !all, twoTransfers: !all, threeTransfers: !all }
+        return { ...rest, all: !all, noTransfers: !all, oneTransfer: !all, twoTransfers: !all, threeTransfers: !all }
       }
 
       const newState = { ...state, [payload]: !state[payload] }
@@ -29,7 +29,7 @@ const asideFilterSlice = createSlice({
         ...newState,
         all:
           allFiltersEnabled ||
-          (newState.noTransfer && newState.oneTransfer && newState.twoTransfers && newState.threeTransfers),
+          (newState.noTransfers && newState.oneTransfer && newState.twoTransfers && newState.threeTransfers),
       }
     },
   },
