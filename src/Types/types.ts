@@ -57,3 +57,14 @@ export interface ITicketsState {
   isLoading: boolean
   error: string | null
 }
+
+export interface IFilterMapping {
+  noTransfers: number
+  oneTransfer: number
+  twoTransfers: number
+  threeTransfers: number
+}
+
+export interface ITicketProps {
+  ticket: ITicket
+}

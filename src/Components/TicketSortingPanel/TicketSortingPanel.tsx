@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import './TicketSortingPanel.scss'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { setSortPanelActive } from '../../Store/sortingPanel/sortingPanel.slice'
+import { setSortedTickets } from '../../Store/tickets/tickets.slice'
 import { ISortingPanelState, IFlightClass } from '../../Types/types'
 
 const TicketSortingPanel = () => {
@@ -13,6 +13,7 @@ const TicketSortingPanel = () => {
 
   const handleItemClick = (clickedIndex: number) => {
     dispatch(setSortPanelActive(clickedIndex))
+    dispatch(setSortedTickets(clickedIndex))
   }
 
   return (

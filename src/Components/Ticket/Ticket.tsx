@@ -1,15 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import './Ticket.scss'
-import s7logo from '../../Assets/img/S7Logo.png'
 
-import { ITicket } from './../../Types/types'
+import { ITicketProps } from './../../Types/types'
 
-interface ITicketProps {
-  ticket: ITicket
-}
+const LOGO_URL = 'http://pics.avs.io/99/36/'
 
 const Ticket: React.FC<ITicketProps> = ({ ticket }) => {
-  const LOGO_URL = 'http://pics.avs.io/99/36/'
   const getFormattedTime = (date: string | Date): string => {
     const formattedDate = typeof date === 'string' ? new Date(date) : date
     const hours = formattedDate.getHours().toString().padStart(2, '0')

@@ -14,7 +14,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware().concat(thunk)
   },
-  devTools: true,
+  devTools: false,
 })
 
 export type TypeRootState = ReturnType<typeof store.getState>

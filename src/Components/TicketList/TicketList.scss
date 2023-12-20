@@ -18,3 +18,12 @@
     background-color: $color-light-blue;
   }
 }
+
+.loading {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+.error-message {
+  margin-top: 20px;
+}
